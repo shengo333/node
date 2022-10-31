@@ -1,10 +1,11 @@
 let fs = require('fs');
 
 
-let readMe = fs.readFileSync('readMe.txt', 'utf8');
+fs.readFile('readMe.txt', 'utf8', function(err,data){
+    fs.writeFile('writeMe.txt', data, function(err, result){
+        if(err) {
+            console.log('errir', err)
+        }
+    })
+});
 
-fs.writeFileSync('writeMe.txt', readMe)
-
-console.log(readMe)
-
-//code
