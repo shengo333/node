@@ -12,9 +12,9 @@ let Person = function(name){
 util.inherits(Person, events.EventEmitter)
 
 
-var james  = new Person('james')
-var mary  = new Person('mary')
-var ryu  = new Person('ryu')
+let james  = new Person('james')
+let mary  = new Person('mary')
+let ryu  = new Person('ryu')
 
 
 let people = [james, mary, ryu]
