@@ -1,11 +1,11 @@
-let fs = require('fs');
+let http = require('http');
 
-
-fs.readFile('readMe.txt', 'utf8', function(err,data){
-    fs.writeFile('writeMe.txt', data, function(err, result){
-        if(err) {
-            console.log('errir', err)
-        }
-    })
+let server = http.createServer(function(req,res){
+    console.log('request was made: ' + req.url)
+    res.writeHead(200, {'Content-Type': 'text/plain'})
+    res.end('Hey ninjas');
 });
 
+server.listen(3000, '127.0.0.1');
+
+console.log('yo dawgs, now listening to port 3000')
