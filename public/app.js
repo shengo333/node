@@ -7,10 +7,13 @@ let fs = require('fs');
 
 var server = http.createServer(function(req,res){
     console.log('request was made: ' + req.url);
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    let myReadStream = fs.createReadStream(__dirname + '/index.html', 'utf-8');
-
-    myReadStream.pipe(res)
+    res.writeHead(200, {'Content-Type': 'application/json'});
+    let myObj = {
+        name: 'Ryu',
+        job: 'Ninja',
+        age: 25
+    }
+    res.end(JSON.stringify(myObj));
 })
 
 
