@@ -1,0 +1,26 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "a little test app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shengo333/node.git"
+  },
+  "keywords": [
+    "fun",
+    "ninjas"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shengo333/node/issues"
+  },
+  "homepage": "https://github.com/shengo333/node#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
